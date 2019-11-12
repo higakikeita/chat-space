@@ -25,7 +25,7 @@ Things you may want to cover:
 # messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-| body |text|null:false|
+| body |text|
 |image |string| 
 |group|references|foreign_key:true|
 |user|references|foreign_key:true|
@@ -41,16 +41,16 @@ belongs_to :user
 ### Association
 has_many :groups,through: :group_users
 has_many :group_users
-has_many :massages
+has_many :messages
 
 # groups table
 |Column|Type|Options|
 |------|----|-------|
 |name|string|index:true,null:false,unique:true|
-##Association
+### Association
 has_many:users,through::group_users
 has_many:group_users
-has_many:masseges
+has_many:messeges
 
 # group_users table
 |Column|type|Options|
