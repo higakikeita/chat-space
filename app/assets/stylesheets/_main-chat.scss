@@ -8,8 +8,7 @@
       display: flex;
       justify-content: space-between;
       overflow: scroll;
-
-      .main-header__left-box{
+      &__left-box{
         margin-top: 35px;
         &__current-group{
           font-size: 20px;
@@ -22,7 +21,7 @@
           color: #999999;
         }
       }
-    .main-header__edit-btn{
+      &__edit-btn{
         height: 40px;
         line-height: 40px;
         padding: 0 20px;
