@@ -2,13 +2,13 @@
   .side-header
     .side-header__box
       .side-header__box__user-name
-        けいちゃん
+        = current_user.name
       .side-header__box__menu
         .side-header__box__menu--new-group
           =link_to "#" do
             %i.fas.fa-edit.fas-white
         .side-header__box__menu--edit-user
-          =link_to "#" do
+          =link_to edit_user_path(current_user) do
             %i.fas.fa-cog.fas-white
   .groups
     .group
