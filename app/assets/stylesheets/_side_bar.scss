@@ -15,9 +15,7 @@
       font-weight: bold;
       &__menu{
         display:flex;
-        .fas{
-          color:white;
-        }
+       
       }
     }
   }
@@ -33,10 +31,14 @@
         font-size: 15px;
         margin-bottom: 5px;
       }
-      .latest-message{
+      &-message{
         font-size: 11px;
       }
     }
   }
   
+}
+a{
+  text-decoration: none;
+  color: white;
 }

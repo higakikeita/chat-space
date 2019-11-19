@@ -5,15 +5,17 @@
         = current_user.name
       .side-header__box__menu
         .side-header__box__menu--new-group
-          =link_to "#" do
-            %i.fas.fa-edit.fas-white
+          =link_to new_group_path do
+            %i.fas.fa-edit
         .side-header__box__menu--edit-user
           =link_to edit_user_path(current_user) do
-            %i.fas.fa-cog.fas-white
+            %i.fas.fa-cog
   .groups
-    .group
-      .group-name
-        プログラミング
-      .latest-message
-        できるかな
+    - current_user.groups.each do |group|
+      .group
+        =link_to group_messages_path(group) do
+          .group-name
+            =group.name
+          .group-message
+            メッセージはまだありません
 
