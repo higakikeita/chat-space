@@ -1,6 +1,10 @@
+*{
+  box-sizing: border-box;
+}
+
 .chat-main{
   width: calc(100vw - 300px);
-  float: right;
+  float: left;
   border-bottom: solid 1px #eeeeee;
     .main-header{
       height: 100px;
@@ -22,13 +26,17 @@
         }
       }
       &__edit-btn{
-        height: 40px;
-        line-height: 40px;
-        padding: 0 20px;
-        border: solid 1px #38aef0;
-        right: 40px;
-        color: #38aef0;  
-        margin-top: 30px;
+        .chat-group-form{
+          text-decoration: none;
+          color: $light_blue;
+          height: 40px;
+          line-height: 40px;
+          padding: 0 20px;
+          right: 40px;
+          margin-top: 30px;
+          border: 1px solid $light_blue;
+        }
+          
       }
     }
   .messages{
@@ -59,37 +67,40 @@
     }
     .form {
       background-color: #DDDDDD;
-      box-sizing: border-box;
       height: 90px;
-      padding: 20px 50px 20px 40px;
-      &__message {
+      padding: 20px 40px;
+      width: 100%;
+      box-sizing: border-box;
+      &__message{
         border: none;
         float: left;
         height: 50px;
         width: calc(100% - 150px);
-      }
-      &__mask {
-        background-color: $white;
-        float: left;
-        height: 50px;
-        padding-right: 10px;
-        &__image {
-          font-size: 20px;
-          line-height: 50px;
+        &__box{
+          
+          background-color: $white;
+          float: left;
+          height: 50px;
+          padding-right: 10px;
+          &__image {
+            font-size: 20px;
+            line-height: 50px;
+            
+            }
+          .hidden {
+            display: none;
+          }
         }
-        .hidden {
-          display: none;
+        &__submit {
+          background-color: $light_blue;
+          border: none;
+          color: $white;
+          float: right;
+          font-size: 16px;
+          height: 50px;
+          margin-left: 15px;
+          padding: 0 30px;
         }
-      }
-      &__submit {
-        background-color: $light_blue;
-        border: none;
-        color: $white;
-        float: right;
-        font-size: 16px;
-        height: 50px;
-        margin-left: 15px;
-        padding: 0 30px;
-      }
     }
+  } 
 }
