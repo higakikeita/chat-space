@@ -2,20 +2,22 @@
   .main-header
     .main-header__left-box
       .main-header__left-box__current-group
-        プログラミング
+        =@group.name
       .main-header__left-box__member-list
         Member:
+        - @group.users.each do |user|
+          = user.name
     .main-header__edit-btn
-      EDIT
+      = link_to  "Edit",edit_group_path(@group),class:"chat-group-form"
   .messages
     =render @messages
     
   .form
     = form_for [@group, @message] do |f|
       = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-      .form__mask
-        = f.label :image, class: 'form__mask__image' do
+      .form__message__box
+        = f.label :image, class: 'form__message__box__image' do
           = icon('fas', 'image', class: 'icon')
           = f.file_field :image, class: 'hidden'
-      = f.submit 'Send', class: 'form__submit'
+      = f.submit 'Send', class: 'form__message__submit'
 
