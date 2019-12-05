@@ -5,8 +5,8 @@
         =@group.name
       .main-header__left-box__member-list
         Member:
-        - @group.users.each do |user|
-          = user.name
+        - @group.users.each do |group_user|
+          =group_user.name
     .main-header__edit-btn
       = link_to  "Edit",edit_group_path(@group),class:"chat-group-form"
   .messages
@@ -20,4 +20,3 @@
           = icon('fas', 'image', class: 'icon')
           = f.file_field :image, class: 'hidden'
       = f.submit 'Send', class: 'form__message__submit'
-
