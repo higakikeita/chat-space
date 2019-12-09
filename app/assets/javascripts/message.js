@@ -11,14 +11,15 @@ $(function(){
                           <div class="message__upper-info__date">
                             ${message.created_at}
                           </div>
-                        </div>
-                        <div class="message__text">
-                          <p class="message__text__content">
-                            ${message.content}
-                          </p>
-                          ${image}
-                    </div>
-                  </div>` //メッセージに画像が含まれる場合のHTMLを作る
+                      </div>
+                      </div>
+                    <div class="message__text">
+                      <div class="message__text__content">
+                          ${message.content}
+                      </div>
+                        ${image}
+                  </div>
+                ` //メッセージに画像が含まれる場合のHTMLを作る
   
     return html;
   }

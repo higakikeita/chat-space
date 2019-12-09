@@ -8,7 +8,7 @@
         - @group.users.each do |group_user|
           =group_user.name
     .main-header__edit-btn
-      = link_to  "Edit",edit_group_path(@group),class:"chat-group-form"
+      =link_to "Edit",edit_group_path(@group),class:"edit-btn"
   .messages
     =render @messages
     
