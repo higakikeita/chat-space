@@ -6,6 +6,7 @@ RUN apt-get update -qq && \
   libpq-dev \        
   nodejs           
 
+RUN echo "now building..."
 # 作業ディレクトリの作成、設定
 RUN mkdir /app_name 
 
